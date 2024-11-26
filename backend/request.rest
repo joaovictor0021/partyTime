@@ -1,0 +1,106 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name": "Decoração",
+    "description": "Escolha a decoração para sua festa, e nós a montamos.",
+    "price": 1400,
+    "image": "https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=892&q=80"
+  }
+
+###
+
+//Get all
+GET http://localhost:3000/api/services
+
+###
+
+// Get one
+GET http://localhost:3000/api/services/6744881670e9681255340d0f
+
+###
+
+//Delete
+DELETE  http://localhost:3000/api/services/67448b3be3df74c11bf848c4
+
+###
+PUT http://localhost:3000/api/services/67448b99e3df74c11bf848c7
+Content-Type: application/json
+
+{
+  "name": "Nome Atualizado",
+  "description": "Descrição atualizada!",
+  "price": 7000,
+  "image": "https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png"
+}
+
+
+// Operação CRUD
+// C = Create
+// R = Read
+// U = Update
+// D = Delete
+
+
+### 
+POST http://localhost:3000/api/parties
+Content-Type: application/json
+
+{
+  "title": "Meu novo evento",
+  "author": "Karla",
+  "description": "Nova festa prestes a ser atualizada.",
+  "budget": 6000,
+  "image": "https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png",
+  "services": [
+    {
+      "name": "Garçons",
+      "description": "Descrição de teste 5...",
+      "price": 2000,
+      "image": "https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png"
+    },
+    {
+      "name": "Ornamentação",
+      "description": "Descrição de teste 6",
+      "price": 1500,
+      "image": "https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png"
+    }
+
+  ]
+}
+
+###
+GET http://localhost:3000/api/parties
+
+###
+GET http://localhost:3000/api/parties/6744c01ccec5a8ad2654dc0b
+
+###
+DELETE http://localhost:3000/api/parties/6744c01ccec5a8ad2654dc0b
+
+###
+PUT http://localhost:3000/api/parties/6744ce9757532e7267092ef6cls
+Content-Type: application/json
+
+{
+  "title": "Evento Atualizado.",
+  "author": "Karla",
+  "description": "Nova festa prestes a ser atualizada.",
+  "budget": 3500,
+  "image": "https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png",
+  "services": [
+    {
+      "name": "Novos Garçons",
+      "description": "Descrição de teste 5...",
+      "price": 2000,
+      "image": "https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png"
+    },
+    {
+      "name": "Nova Ornamentação",
+      "description": "Descrição de teste 6",
+      "price": 1500,
+      "image": "https://s2-techtudo.glbimg.com/L9wb1xt7tjjL-Ocvos-Ju0tVmfc=/0x0:1200x800/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/q/l/TIdfl2SA6J16XZAy56Mw/canvaai.png"
+    }
+
+  ]
+}
